@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        "loading-bar": "loadingBar 3s linear",
+      },
+      keyframes: {
+        loadingBar: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

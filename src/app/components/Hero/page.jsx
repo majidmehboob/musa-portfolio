@@ -3,23 +3,9 @@ import { TbBrandFiverr } from "react-icons/tb";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-[calc(100vh)] flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800">
-      {/* Dynamic Grid Background */}
-      {/* <div className="absolute inset-0 grid grid-cols-[repeat(auto-fill,_100px)] gap-4 z-0">
-        {Array.from({ length: 100 }).map((_, index) => (
-          <div
-            key={index}
-            className="bg-gray-700 opacity-70"
-            style={{
-              width: "100px",
-              height: "100px",
-            }}
-          ></div>
-        ))}
-      </div> */}
-
+    <section className="w-full h-[calc(100vh)] flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800">
       {/* Foreground Content */}
-      <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row  items-center gap-10 relative z-10">
+      <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row  items-center justify-center md:gap-10 py-20 md:py-0">
         {/* Left Section: Text Content */}
         <div className="flex-1 text-white text-center md:text-left">
           <p className="text-lg mb-2 text-gray-300">
@@ -56,7 +42,7 @@ export default function HeroSection() {
             height={500}
             src="/hero_image-removebg.png"
             alt="Hero Image"
-            className="w-full max-w-md md:max-w-lg rounded-lg shadow-lg"
+            className="w-full max-w-md md:max-w-lg md:h-auto  rounded-lg shadow-lg"
           />
         </div>
       </div>

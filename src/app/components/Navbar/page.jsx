@@ -160,3 +160,22 @@ export default function Navbar() {
   //     </div>
   //   </footer>
   // </div>;
+
+
+  {
+    /* Dynamic Grid Background */
+  }
+  {
+    /* <div className="absolute inset-0 grid grid-cols-[repeat(auto-fill,_100px)] gap-4 z-0">
+        {Array.from({ length: 100 }).map((_, index) => (
+          <div
+            key={index}
+            className="bg-gray-700 opacity-70"
+            style={{
+              width: "100px",
+              height: "100px",
+            }}
+          ></div>
+        ))}
+      </div> */
+  }

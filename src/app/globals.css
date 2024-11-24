@@ -1,3 +1,14 @@
+:root {
+  --primary: #3498db;
+  /* Replace with your primary color */
+  --secondary: #2ecc71;
+  /* Replace with your secondary color */
+  --background: #f5f5f5;
+  /* Replace with your background color */
+  --foreground: #333333;
+  /* Replace with your foreground color */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

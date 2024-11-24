@@ -18,12 +18,12 @@ const Page = () => {
               >
                 <FaQuoteRight className='text-6xl my-4 text-blue-500' />
                 <p className="text-gray-600 italic text-center w-[80%]">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Proin et urna vitae sapien."
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                  Proin et urna vitae sapien
                 </p>
                 <div className="flex justify-center items-center">
                   {[...Array(7)].map((_, i) => (
-                    <MdOutlineStarPurple500 className="text-xl text-yellow-500" />
+                    <MdOutlineStarPurple500 key={i} className="text-xl text-yellow-500" />
                   ))}
                 </div>
                 <div className="text-center">

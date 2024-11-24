@@ -19,13 +19,17 @@ export default function Navbar() {
               Home
             </Link>
             <Link href="#projects" className="hover:text-gray-400">
-              Projects
+              About
+            </Link>
+
+            <Link href="#blog" className="hover:text-gray-400">
+              Services
+            </Link>
+            <Link href="#contact" className="hover:text-gray-400">
+              Portfolio
             </Link>
             <Link href="#contact" className="hover:text-gray-400">
               Contact Us
-            </Link>
-            <Link href="#blog" className="hover:text-gray-400">
-              Blog
             </Link>
           </ul>
 

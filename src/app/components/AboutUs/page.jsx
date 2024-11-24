@@ -30,7 +30,7 @@ export default function AboutUs() {
               My Skills
             </h3>
             <p className="text-gray-600 text-center md:text-left mb-6">
-              Technologies I've been working with recently
+              {`Technologies I've been working with recently`}
             </p>
             {/* Skills Grid */}
             <div className="grid grid-cols-3 md:grid-cols-5 gap-4 place-items-center">

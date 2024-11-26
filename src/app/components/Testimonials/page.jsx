@@ -1,9 +1,10 @@
 import React from 'react'
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import { FaQuoteRight } from "react-icons/fa";
+import { Element } from 'react-scroll';
 const Page = () => {
   return (
-    <div>
+    <Element name="section4">
       {/* Testimonials Section */}
       <section className="py-16 px-16 bg-gray-100">
         <div className="container mx-auto">
@@ -36,7 +37,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-    </div>
+    </Element>
   );
 }
 

@@ -1,7 +1,6 @@
 "use client";
-
+import { Link} from "react-scroll";
 import { useState } from "react";
-import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
@@ -15,20 +14,45 @@ export default function Navbar() {
         <div className="container mx-auto px-6 flex justify-between items-center py-4">
           <h1 className="text-2xl font-bold text-white">Musa Umer</h1>
           <ul className="hidden outline-none md:flex space-x-6 text-white">
-            <Link href="#home" className="hover:text-gray-400">
+            <Link
+              to="section1"
+              smooth={true}
+              duration={500}
+              className="hover:text-gray-400"
+            >
               Home
             </Link>
-            <Link href="#projects" className="hover:text-gray-400">
+            <Link
+              to="section2"
+              smooth={true}
+              duration={500}
+              className="hover:text-gray-400"
+            >
               About
             </Link>
 
-            <Link href="#blog" className="hover:text-gray-400">
+            <Link
+              to="section3"
+              smooth={true}
+              duration={500}
+              className="hover:text-gray-400"
+            >
               Services
             </Link>
-            <Link href="#contact" className="hover:text-gray-400">
+            <Link
+              to="section4"
+              smooth={true}
+              duration={500}
+              className="hover:text-gray-400"
+            >
               Portfolio
             </Link>
-            <Link href="#contact" className="hover:text-gray-400">
+            <Link
+              to="section5"
+              smooth={true}
+              duration={500}
+              className="hover:text-gray-400"
+            >
               Contact Us
             </Link>
           </ul>
@@ -52,7 +76,9 @@ export default function Navbar() {
         <ul className="flex flex-col items-center justify-center h-full space-y-6">
           <li>
             <Link
-              href="#home"
+              to="section1"
+              smooth={true}
+              duration={500}
               className="text-lg hover:text-gray-400"
               onClick={toggleSidebar}
             >
@@ -61,29 +87,46 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="#projects"
+              to="section2"
+              smooth={true}
+              duration={500}
               className="text-lg hover:text-gray-400"
               onClick={toggleSidebar}
             >
-              Projects
+              About
             </Link>
           </li>
           <li>
             <Link
-              href="#contact"
+              to="section3"
+              smooth={true}
+              duration={500}
               className="text-lg hover:text-gray-400"
               onClick={toggleSidebar}
             >
-              Contact Us
+              Services
             </Link>
           </li>
           <li>
             <Link
-              href="#blog"
+              to="section4"
+              smooth={true}
+              duration={500}
               className="text-lg hover:text-gray-400"
               onClick={toggleSidebar}
             >
-              Blog
+              Portfolio
+            </Link>
+            </li>
+            <li>
+            <Link
+              to="section5"
+              smooth={true}
+              duration={500}
+              className="text-lg hover:text-gray-400"
+              onClick={toggleSidebar}
+            >
+             Contact Us
             </Link>
           </li>
         </ul>

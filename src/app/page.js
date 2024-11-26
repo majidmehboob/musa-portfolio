@@ -8,6 +8,7 @@ import Card from "./components/Card/page";
 import AboutUs from "./components/AboutUs/page";
 import Testimonials from "./components/Testimonials/page";
 import Contact from "./components/ContactUs/page";
+import Services from "./components/Services/page";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -72,6 +73,7 @@ export default function Home() {
       <HeroSection />
       <Card />
       <AboutUs />
+      <Services/>
       <Testimonials />
       <Contact />
       <footer className="w-full bg-gray-900 text-gray-400 py-4 text-center">

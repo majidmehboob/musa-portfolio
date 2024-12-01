@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { RiSecurePaymentFill } from "react-icons/ri";
 import { LuShoppingCart } from "react-icons/lu";
@@ -6,7 +7,7 @@ import { Element } from "react-scroll";
 const Services = () => {
   return (
     <Element name="section3">
-      <section
+      <div
         className=" min-h-screen h-screen w-full py-10 md:px-20 px-8 bg-gray-100
     flex justify-center items-center flex-col gap-4"
       >
@@ -40,7 +41,7 @@ const Services = () => {
             ))}
           </div>
         </div>
-      </section>
+      </div>
     </Element>
   );
 };

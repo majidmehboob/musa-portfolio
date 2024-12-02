@@ -1,5 +1,4 @@
 "use client";
-import { Link} from "react-scroll";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -8,53 +7,66 @@ export default function Navbar() {
 
   const toggleSidebar = () => setIsOpen(!isOpen);
 
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    setIsOpen(false); // Close sidebar if it's open
+  };
+
   return (
     <>
       <div className="fixed top-0 w-full z-50 backdrop-blur-md bg-opacity-75 bg-gray-800">
         <div className="container mx-auto px-6 flex justify-between items-center py-4">
-          <h1 className="text-2xl font-bold text-white">Musa Umer</h1>
-          <ul className="hidden outline-none md:flex space-x-6 text-white">
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
-              className="hover:text-gray-400"
-            >
-              Home
-            </Link>
-            <Link
-              to="section2"
-              smooth={true}
-              duration={500}
-              className="hover:text-gray-400"
-            >
-              About
-            </Link>
-
-            <Link
-              to="section3"
-              smooth={true}
-              duration={500}
-              className="hover:text-gray-400"
-            >
-              Services
-            </Link>
-            <Link
-              to="section4"
-              smooth={true}
-              duration={500}
-              className="hover:text-gray-400"
-            >
-              Portfolio
-            </Link>
-            <Link
-              to="section5"
-              smooth={true}
-              duration={500}
-              className="hover:text-gray-400"
-            >
-              Contact Us
-            </Link>
+          <h1 className="text-2xl font-bold text-white">
+            <span className="bg-blue-800 rounded-md px-2 py-1">Musa</span> Umer
+          </h1>
+          {/* Desktop Navbar */}
+          <ul className="hidden md:flex space-x-6 text-white">
+            <li>
+              <a
+                href="#hero-section"
+                className="hover:text-gray-400"
+                onClick={(e) => scrollToSection(e, "hero-section")}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about-us-section"
+                className="hover:text-gray-400"
+                onClick={(e) => scrollToSection(e, "about-us-section")}
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#services-section"
+                className="hover:text-gray-400"
+                onClick={(e) => scrollToSection(e, "services-section")}
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="#testimonials-section"
+                className="hover:text-gray-400"
+                onClick={(e) => scrollToSection(e, "testimonials-section")}
+              >
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact-section"
+                className="hover:text-gray-400"
+                onClick={(e) => scrollToSection(e, "contact-section")}
+              >
+                Contact Us
+              </a>
+            </li>
           </ul>
 
           {/* Hamburger Icon for small screens */}
@@ -73,156 +85,54 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out w-64 z-40 md:hidden`}
       >
-        <ul className="flex flex-col items-center justify-center h-full space-y-6">
+        <ul className="flex flex-col items-start pl-5 justify-start pt-5 h-full space-y-6">
           <li>
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
+            <a
+              href="#hero-section"
               className="text-lg hover:text-gray-400"
-              onClick={toggleSidebar}
+              onClick={(e) => scrollToSection(e, "hero-section")}
             >
               Home
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="section2"
-              smooth={true}
-              duration={500}
+            <a
+              href="#about-us-section"
               className="text-lg hover:text-gray-400"
-              onClick={toggleSidebar}
+              onClick={(e) => scrollToSection(e, "about-us-section")}
             >
               About
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="section3"
-              smooth={true}
-              duration={500}
+            <a
+              href="#services-section"
               className="text-lg hover:text-gray-400"
-              onClick={toggleSidebar}
+              onClick={(e) => scrollToSection(e, "services-section")}
             >
               Services
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="section4"
-              smooth={true}
-              duration={500}
+            <a
+              href="#testimonials-section"
               className="text-lg hover:text-gray-400"
-              onClick={toggleSidebar}
+              onClick={(e) => scrollToSection(e, "testimonials-section")}
             >
               Portfolio
-            </Link>
-            </li>
-            <li>
-            <Link
-              to="section5"
-              smooth={true}
-              duration={500}
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact-section"
               className="text-lg hover:text-gray-400"
-              onClick={toggleSidebar}
+              onClick={(e) => scrollToSection(e, "contact-section")}
             >
-             Contact Us
-            </Link>
+              Contact Us
+            </a>
           </li>
         </ul>
       </div>
     </>
   );
 }
-
-
-
-  // <div className="font-sans">
-  //   {/* Hero Section */}
-  //   <section className="bg-blue-900 text-white py-20">
-  //     <div className="container mx-auto text-center">
-  //       <h1 className="text-4xl font-bold">
-  //         Unlocking Innovation with IT Expertise
-  //       </h1>
-  //       <p className="mt-4">
-  //         Providing professional IT services for your business growth.
-  //       </p>
-  //       <button className="mt-6 px-6 py-3 bg-white text-blue-900 font-semibold rounded-md">
-  //         Learn More
-  //       </button>
-  //     </div>
-  //   </section>
-
-
-  //   {/* Projects Section */}
-  //   <section className="py-16 bg-white">
-  //     <div className="container mx-auto">
-  //       <h2 className="text-center text-3xl font-bold mb-10">
-  //         Recent Projects
-  //       </h2>
-  //       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  //         {[...Array(3)].map((_, i) => (
-  //           <div
-  //             key={i}
-  //             className="bg-gray-100 p-6 shadow-md rounded-md hover:shadow-lg"
-  //           >
-  //             <div className="h-40 bg-gray-300 mb-4"></div>
-  //             <h3 className="text-xl font-bold">Project {i + 1}</h3>
-  //             <p className="text-gray-600 mt-2">
-  //               A short description of the project.
-  //             </p>
-  //           </div>
-  //         ))}
-  //       </div>
-  //     </div>
-  //   </section>
-
-  //   {/* Testimonials Section */}
-  //   <section className="py-16 bg-gray-100">
-  //     <div className="container mx-auto">
-  //       <h2 className="text-center text-3xl font-bold mb-10">
-  //         What Clients Say
-  //       </h2>
-  //       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  //         {[...Array(3)].map((_, i) => (
-  //           <div
-  //             key={i}
-  //             className="bg-white p-6 text-center shadow-md rounded-md"
-  //           >
-  //             <p className="text-gray-600 italic">
-  //               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-  //               et urna vitae sapien."
-  //             </p>
-  //             <h4 className="mt-4 font-bold">Client {i + 1}</h4>
-  //           </div>
-  //         ))}
-  //       </div>
-  //     </div>
-  //   </section>
-
-  //   {/* Footer */}
-  //   <footer className="bg-blue-900 text-white py-6">
-  //     <div className="container mx-auto text-center">
-  //       <p>© 2024 Your Portfolio. All Rights Reserved.</p>
-  //     </div>
-  //   </footer>
-  // </div>;
-
-
-  {
-    /* Dynamic Grid Background */
-  }
-  {
-    /* <div className="absolute inset-0 grid grid-cols-[repeat(auto-fill,_100px)] gap-4 z-0">
-        {Array.from({ length: 100 }).map((_, index) => (
-          <div
-            key={index}
-            className="bg-gray-700 opacity-70"
-            style={{
-              width: "100px",
-              height: "100px",
-            }}
-          ></div>
-        ))}
-      </div> */
-  }

@@ -1,3 +1,133 @@
+// "use client";
+// import { stagger, useAnimate } from "framer-motion";
+
+// // Generate a random number within a range
+// const randomNumberBetween = (min, max) => {
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// };
+
+// // Define SVG shapes
+// const Polygon = ({ className }) => (
+//   <svg
+//     className={className}
+//     viewBox="0 0 100 100"
+//     width="10"
+//     height="10"
+//     xmlns="http://www.w3.org/2000/svg"
+//   >
+//     <polygon points="50,5 90,40 75,95 25,95 10,40" fill="blue" />
+//   </svg>
+// );
+
+// const SixStar = ({ className }) => (
+//   <svg
+//     className={className}
+//     viewBox="0 0 100 100"
+//     width="10"
+//     height="10"
+//     xmlns="http://www.w3.org/2000/svg"
+//   >
+//     <path
+//       d="M50 5 L61 35 H95 L68 55 L80 85 L50 65 L20 85 L32 55 L5 35 H39 Z"
+//       fill="gold"
+//     />
+//   </svg>
+// );
+
+// const Circle = ({ className }) => (
+//   <svg
+//     className={className}
+//     viewBox="0 0 100 100"
+//     width="10"
+//     height="10"
+//     xmlns="http://www.w3.org/2000/svg"
+//   >
+//     <circle cx="50" cy="50" r="40" fill="red" />
+//   </svg>
+// );
+
+// // Array of shapes for random selection
+// const shapes = [Polygon, SixStar, Circle];
+
+// // Generate random shapes
+// const generateRandomShapes = (count) => {
+//   return Array.from({ length: count }).map((_, index) => {
+//     const Shape = shapes[Math.floor(Math.random() * shapes.length)];
+//     return <Shape key={index} className={`absolute sparkle-${index}`} />;
+//   });
+// };
+
+// function ButtonClient({ name }) {
+//   const [scope, animate] = useAnimate();
+//   const txtarray = name.split(/(\s)/);
+
+//   const onButtonClick = () => {
+//     const sparkles = Array.from({ length: 20 });
+//     const sparklesAnimation = sparkles.map((_, index) => [
+//       `.sparkle-${index}`,
+//       {
+//         x: randomNumberBetween(-100, 100),
+//         y: randomNumberBetween(-100, 100),
+//         scale: randomNumberBetween(1.5, 2.5),
+//         opacity: 1,
+//       },
+//       { duration: 0.4, at: "<" },
+//     ]);
+
+//     const sparklesFadeOut = sparkles.map((_, index) => [
+//       `.sparkle-${index}`,
+//       { opacity: 0, scale: 0 },
+//       { duration: 0.3, at: "<" },
+//     ]);
+
+//     const sparklesReset = sparkles.map((_, index) => [
+//       `.sparkle-${index}`,
+//       { x: 0, y: 0 },
+//       { duration: 0.000001 },
+//     ]);
+
+//     animate([
+//       ...sparklesReset,
+//       [".letter", { y: -32 }, { duration: 0.2, delay: stagger(0.05) }],
+//       ["button", { scale: 0.8 }, { duration: 0.1, at: "<" }],
+//       ["button", { scale: 1 }, { duration: 0.1 }],
+//       ...sparklesAnimation,
+//       [".letter", { y: 0 }, { duration: 0.000001 }],
+//       ...sparklesFadeOut,
+//     ]);
+//   };
+
+//   return (
+//     <div ref={scope}>
+//       <button
+//         onClick={onButtonClick}
+//         className="relative group flex items-center justify-center rounded-full bg-gradient-to-r from-blue-400 to-blue-700 hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-800 md:px-6 px-3 md:py-2 py-1 md:text-2xl text-white transition-colors"
+//       >
+//         <span className="sr-only">{name}</span>
+//         <span className="block h-8 overflow-hidden" aria-hidden>
+//           {txtarray.map((letter, index) => (
+//             <span
+//               data-letter={letter === " " ? "\u00A0" : letter} // Non-breaking space
+//               className="letter relative inline-block h-8 leading-8 after:absolute after:left-0 after:top-full after:h-8 after:content-[attr(data-letter)]"
+//               key={`${letter}-${index}`}
+//             >
+//               {letter === " " ? "\u00A0" : letter}
+//             </span>
+//           ))}
+//         </span>
+//         <span
+//           aria-hidden
+//           className="pointer-events-none absolute inset-0 -z-10 block"
+//         >
+//           {generateRandomShapes(20)}
+//         </span>
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default ButtonClient;
+
 "use client";
 import { stagger, useAnimate } from "framer-motion";
 

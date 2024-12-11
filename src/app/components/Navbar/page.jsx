@@ -81,21 +81,21 @@ export default function Navbar() {
 
       {/* Sidebar for small screens */}
       <div
-        className={`fixed top-16 right-0 h-[calc(100vh-4rem)] bg-gray-800 text-white transform ${
+        className={`fixed top-16 right-0 h-[calc(100vh-4rem)] bg-gray-800 text-gray-400 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out w-64 z-40 md:hidden`}
       >
-        <ul className="flex flex-col items-start pl-5 justify-start pt-5 h-full space-y-6">
-          <li>
+        <ul className="flex flex-col items-start pl-5 pr-5 justify-start pt-5 h-full w-full space-y-6">
+          <li className="pb-3 border-b border-gray-500 w-full">
             <a
               href="#hero-section"
-              className="text-lg hover:text-gray-400"
+              className="text-lg hover:text-gray-400 "
               onClick={(e) => scrollToSection(e, "hero-section")}
             >
               Home
             </a>
           </li>
-          <li>
+          <li className="pb-3 border-b w-full border-gray-500">
             <a
               href="#about-us-section"
               className="text-lg hover:text-gray-400"
@@ -104,7 +104,7 @@ export default function Navbar() {
               About
             </a>
           </li>
-          <li>
+          <li className="pb-3 border-b w-full border-gray-500">
             <a
               href="#services-section"
               className="text-lg hover:text-gray-400"
@@ -113,7 +113,7 @@ export default function Navbar() {
               Services
             </a>
           </li>
-          <li>
+          <li className="pb-3 border-b w-full border-gray-500">
             <a
               href="#testimonials-section"
               className="text-lg hover:text-gray-400"
@@ -122,7 +122,7 @@ export default function Navbar() {
               Portfolio
             </a>
           </li>
-          <li>
+          <li className="pb-3 border-b w-full border-gray-500">
             <a
               href="#contact-section"
               className="text-lg hover:text-gray-400"

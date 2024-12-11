@@ -10,7 +10,7 @@ const Services = () => {
       ref={scale}
       className="min-h-screen h-auto w-full py-10 px-6 md:px-20 lg:px-20 bg-[var(--background)] flex flex-col items-center gap-6"
     >
-      <p className="text-lg text-blue-500 italic">What we Provide</p>
+      <p className="text-2xl font-bold text-blue-500 italic">What we Provide</p>
       <h1 className="text-2xl md:text-4xl text-gray-200 font-bold text-center leading-snug md:leading-tight">
         Provide Interactive IT Solutions <br /> Business Services
       </h1>

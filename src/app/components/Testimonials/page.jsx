@@ -23,8 +23,8 @@ const Page = () => {
   return (
     <div className="px-4 md:px-20 py-10 sm:px-8 lg:px-20 bg-[var(--background)]">
       <div className="container mx-auto">
-        <h2 className="text-center text-gray-200 text-2xl md:text-3xl font-bold mb-10">
-          What Our Valuable Clients Say
+        <h2 className="text-center  text-gray-200 text-2xl md:text-3xl font-bold mb-10">
+          What Clients Say About Musa ?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, i) => (
@@ -57,9 +57,7 @@ const Page = () => {
                 <h1 className="font-bold mt-2 text-base sm:text-lg">
                   {testimonial.client}
                 </h1>
-                <p className="text-xs sm:text-sm text-gray-500">
-                  Tesla Founder
-                </p>
+                
               </div>
             </div>
           ))}

@@ -56,14 +56,14 @@ export default function Home() {
       <section id="hero-section">
         <HeroSection />
       </section>
-      <Card/>
+      <Card />
       <section id="about-us-section">
         <AboutUs />
       </section>
       <section id="services-section">
         <Services />
       </section>
-      <WorkingWith/>
+      <WorkingWith />
       <section id="testimonials-section">
         <Testimonials />
       </section>

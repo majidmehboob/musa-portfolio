@@ -38,7 +38,7 @@ export default function Contact() {
             ].map((item) => (
               <button
                 key={item}
-                className=" px-4 py-3 border rounded-lg focus:outline-none   bg-gray-200 shadow-[inset_-5px_-5px_8px_#ffffff7a,inset_5px_5px_8px_#a9a9aa7a] "
+                className=" px-4 py-3 border rounded-lg focus:outline-none   bg-gray-200 shadow-[inset_-5px_-5px_8px_#ffffff7a,inset_5px_5px_8px_#a9a9aa7a]"
               >
                 {item}
               </button>
@@ -80,7 +80,7 @@ export default function Contact() {
             ></textarea>
 
             <div className="relative z-20">
-              <ButtonClient name="Contact Us" />
+              <ButtonClient name="Submit" />
             </div>
           </form>
 

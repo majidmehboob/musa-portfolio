@@ -32,14 +32,14 @@ export default function HeroSection() {
             transition={{ delay: 0.3, duration: 0.6 }}
           >
             <motion.p
-              className="text-lg mb-2 text-gray-300"
+              className="text-lg md:mb-2 text-gray-300"
               variants={textVariants}
               transition={{ delay: 0.5, duration: 0.6 }}
             >
               We are the dream Builders
             </motion.p>
             <motion.h1
-              className="text-3xl md:text-6xl font-bold mb-4 tracking-wide leading-1"
+              className="text-3xl md:text-6xl font-bold md:mb-4 tracking-wide leading-1"
               variants={textVariants}
               transition={{ delay: 0.7, duration: 0.6 }}
             >
@@ -74,7 +74,7 @@ export default function HeroSection() {
               height={500}
               src="/hero_image-removebg.png" // Adjust image path if necessary
               alt="Hero Image"
-              className=" w-56 h-56 md:mt-0 mt-6 object-cover md:w-full md:max-w-lg md:h-auto rounded-lg shadow-lg"
+              className=" w-full h-[52vh] md:mt-0 mt-6 object-cover md:w-full md:max-w-lg md:h-auto rounded-lg shadow-lg"
             />
           </motion.div>
         </div>

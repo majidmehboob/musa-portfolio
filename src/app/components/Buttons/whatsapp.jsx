@@ -175,6 +175,10 @@ function ButtonClient({ name, item }) {
       ["sprinkle", { scale: 1 }],
       ...sparklesFadeOut,
     ]);
+
+    setTimeout(()=>{
+      window.open(item,"_blank")
+    },1000)
   };
 
   return (
@@ -183,7 +187,7 @@ function ButtonClient({ name, item }) {
         onClick={onButtonClick}
         className="relative group flex items-center justify-center rounded-full bg-gradient-to-r from-blue-400 to-blue-700 hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-800 md:px-6 px-3 md:py-2 py-1 md:text-2xl text-white transition-colors"
       >
-        <a href={item} target='blank'>
+       
           <span className="sr-only">{name}</span>
           <span className="block h-8 overflow-hidden" aria-hidden>
             {txtarray.map((letter, index) => (
@@ -258,7 +262,6 @@ function ButtonClient({ name, item }) {
               <path d="M1810 345 c0 -10 40 -45 53 -45 6 0 8 1 6 3 -2 1 -16 13 -31 26 -16 14 -28 21 -28 16z"></path>
             </g>
           </svg>
-        </a>
       </button>
     </div>
   );

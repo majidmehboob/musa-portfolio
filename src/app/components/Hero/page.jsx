@@ -24,7 +24,7 @@ export default function HeroSection() {
         className="w-full h-[calc(100vh)] flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800 overflow-hidden relative"
       >
         {/* Foreground Content */}
-        <div className="container md:mx-auto md:px-6 px-2 md:grid md:grid-cols-12 flex flex-col-reverse items-center justify-center md:gap-10 gap-2 py-20 md:py-0">
+        <div className="container md:mx-auto md:px-6 px-2 md:grid md:grid-cols-12 flex flex-col-reverse items-center md:justify-center justify-between md:gap-10 gap-6 py-20 md:py-0">
           {/* Left Section: Text Content */}
           <motion.div
             className="md:col-span-6 col-span-12 text-white md:text-left text-center"
@@ -74,7 +74,7 @@ export default function HeroSection() {
               height={500}
               src="/hero_image-removebg.png" // Adjust image path if necessary
               alt="Hero Image"
-              className=" w-full h-[52vh] md:mt-0 mt-6 object-cover md:w-full md:max-w-lg md:h-auto rounded-lg shadow-lg"
+              className=" w-[50vh] h-[50vh] md:mt-0 mt-0 md:object-cover object-contain md:w-full md:max-w-lg md:h-auto rounded-lg shadow-lg"
             />
           </motion.div>
         </div>
